@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        .navbar {
+            background-color: #00308F;
+            position: static;
+        }
+
+        .navbar .navbar-brand h1,
+        .navbar .navbar-brand p {
+            color: white;
+            margin: 0;
+        }
+
+        .navbar .nav-link,
+        .navbar .fas {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }   
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" onclick="navigateToHome()" style="cursor: pointer;">
+                    <h1 class="logo">Ashapura</h1>
+                    <p class="subtitle">Electronics</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <form class="form-inline my-2 my-lg-0 ml-auto d-flex align-items-center">
+                        <input class="form-control mr-sm-2" type="search" id="search-input" placeholder="Search..."
+                            aria-label="Search Products">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="handleSearch()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="Logout()">
+                                <i class="fas fa-user"></i>
+                                <span id="user-name">Logout</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="navigateToOrders()">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Your Orders</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="navigateToCart()">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Cart</span>
+                            </a>
+                        </li>
+                        
+                      
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 id="cart-title">Shopping Cart</h1>
+        <div class="cart-container">
+            <div id="cart-items" class="cart-items"></div>
+            <div class="order-summary" id="order-summary" style="display: none;"> <!-- Hidden by default -->
+                <h2>Order Summary</h2>
+                <div id="summary-details"></div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

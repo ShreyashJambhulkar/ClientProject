@@ -1,0 +1,134 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#order-history-div{
+    margin-top: 90px;
+}
+
+#order-history-container {
+    margin: 50px 25px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 20px;
+}
+
+/* Empty cart styles */
+.empty-cart-container {
+    text-align: center; /* Aligns text to the left */
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.empty-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-cart .card-body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;    
+    display: flex;
+    flex-direction: column;
+}
+.empty-cart img {
+    width: 150px;
+}
+
+.empty-cart .cart-p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.empty-cart .cart-p1 {
+    font-size: 16px;
+    color: gray;
+}
+
+.place-order-container {
+    margin-top: 20px;
+    text-align: left; /* Aligns button to the left */
+}
+
+.place-order-container button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.place-order-container button:hover {
+    background-color: #0066d3;
+}
+
+/* Order item styles */
+.cart-item-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-image-container {
+    width: 150px;
+}
+
+.cart-text-container {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.cart-text-container p {
+    margin: 5px 0;
+}
+
+.cart-text-container .price-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.price-container p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cart-item-container {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items to the left */
+        text-align: left; /* Ensures text is left-aligned */
+    }
+
+    .cart-image-container {
+        margin-bottom: 10px;
+    }
+
+    .cart-text-container {
+        margin-left: 0;
+    }
+}
+
+.empty-cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Ensures it occupies a minimum height */
+}
+
+.empty-cart {
+    max-width: 400px; /* Limits the maximum width of the card */
+    margin: 0 auto; /* Centers the card */
+}

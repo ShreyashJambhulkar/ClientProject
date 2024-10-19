@@ -1,0 +1,48 @@
+<head>
+  
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <script src="header.js" defer></script>
+</head>
+
+<header class="header">
+    <div class="app-bar">
+        <div class="header-content">
+            <div class="main-right-container">
+                <div class="logo-container" onclick="navigateToHome()" style="cursor: pointer;">
+                    <h1 class="logo">Ashapura</h1>
+                    <p class="subtitle">Electronics</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-bar" placeholder="Search..." aria-label="Search Products">
+                    <button class="search-button" onclick="handleSearch()" aria-label="Search">
+                        <i style="color: white;" class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="icons-container" aria-label="User actions">
+                <button id="user-button" class="icon-button" onclick="Logout()" aria-label="User Account">
+                    <i class="fas fa-user"></i>
+                    <span id="user-name"></span>
+                </button>
+                <button class="icon-button" onclick="navigateToOrders()" aria-label="Your Orders">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Your Orders</span>
+                </button>
+                <button class="icon-button" onclick="navigateToCart()" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cart-count">0</span>
+                </button>
+                <button class="icon-button" onclick="navigateToSeller()" aria-label="Become a Seller">
+                    <i class="fas fa-store"></i>
+                    <span>Become a Seller</span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</header>
